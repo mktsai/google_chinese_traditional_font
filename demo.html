@@ -25,15 +25,15 @@
 			var uri = getUrlQuery();
 			if(uri['f'] == undefined)
 			{
-				window.location.href = "./google_zh_tw_font.html?f=0";
+				window.location.href = "./demo.html?f=0";
 			}
 			else if(isNaN(uri['f']))
 			{
-				window.location.href = "./google_zh_tw_font.html?f=0";
+				window.location.href = "./demo.html?f=0";
 			}
 			else if(parseInt(uri['f'])> 4 || parseInt(uri['f']) < 0)
 			{
-				window.location.href = "./google_zh_tw_font.html?f=0";
+				window.location.href = "./demo.html?f=0";
 			}
 			var fonts = [
 				{
@@ -121,7 +121,7 @@
 				}
 				$("div.radios").html(radio);
 				$("input[type='radio']").on("click",function(){
-					window.location.href = './google_zh_tw_font.html?f=' + $(this).val();
+					window.location.href = './demo.html?f=' + $(this).val();
 				});
 			});
 		</script>
