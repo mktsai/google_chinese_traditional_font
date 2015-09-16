@@ -6,4 +6,6 @@ google線上免費中文字型 demo page
 
 由於文字較多，因此讀取頁面時，需花一些時間。
 
+DEMO頁面 http://mktsai.github.io/google_chinese_traditional_font/demo.html?f=0
+
 https://github.com/mktsai/google_chinese_traditional_font
