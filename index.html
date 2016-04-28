@@ -22,51 +22,61 @@
 			    return vars;
 			}
 			
+			var fonts = [
+        {
+          css : "cwtexfangsong.css",
+          font_name : "cwTeXFangSong",
+          en_font : "serif",
+          des : "仿宋體"
+        },
+        {
+          css : "cwtexhei.css",
+          font_name : "cwTeXHei",
+          en_font : "sans-serif",
+          des : "黑體"
+        },
+        {
+          css : "cwtexkai.css",
+          font_name : "cwTeXKai",
+          en_font : "sans-serif",
+          des : "楷體"
+        },
+        {
+          css : "cwtexming.css",
+          font_name : "cwTeXMing",
+          en_font : "serif",
+          des : "明體"
+        },
+        {
+          css : "cwtexyen.css",
+          font_name : "cwTeXYen",
+          en_font : "sans-serif",
+          des : "圓體"
+        },
+        {
+          css : "notosanstc.css",
+          font_name : "Noto Sans TC",
+          en_font : "sans-serif",
+          des : "思源黑體"
+        }
+      ];
+			
 			var uri = getUrlQuery();
+			
+			
 			if(uri['f'] == undefined)
 			{
-				window.location.href = "./google_zh_tw_font.html?f=0";
+				window.location.href = "./index.html?f=0";
 			}
 			else if(isNaN(uri['f']))
 			{
-				window.location.href = "./google_zh_tw_font.html?f=0";
+				window.location.href = "./index.html?f=0";
 			}
-			else if(parseInt(uri['f'])> 4 || parseInt(uri['f']) < 0)
+			else if(parseInt(uri['f']) > fonts.length || parseInt(uri['f']) < 0)
 			{
-				window.location.href = "./google_zh_tw_font.html?f=0";
+				window.location.href = "./index.html?f=0";
 			}
-			var fonts = [
-				{
-					css : "cwtexfangsong.css",
-					font_name : "cwTeXFangSong",
-					en_font : "serif",
-					des : "仿宋體"
-				},
-				{
-					css : "cwtexhei.css",
-					font_name : "cwTeXHei",
-					en_font : "sans-serif",
-					des : "黑體"
-				},
-				{
-					css : "cwtexkai.css",
-					font_name : "cwTeXKai",
-					en_font : "sans-serif",
-					des : "楷體"
-				},
-				{
-					css : "cwtexming.css",
-					font_name : "cwTeXMing",
-					en_font : "serif",
-					des : "明體"
-				},
-				{
-					css : "cwtexyen.css",
-					font_name : "cwTeXYen",
-					en_font : "sans-serif",
-					des : "圓體"
-				}
-			];
+			
 			
 		</script>
 		<style>
@@ -121,7 +131,7 @@
 				}
 				$("div.radios").html(radio);
 				$("input[type='radio']").on("click",function(){
-					window.location.href = './google_zh_tw_font.html?f=' + $(this).val();
+					window.location.href = './index.html?f=' + $(this).val();
 				});
 			});
 		</script>
